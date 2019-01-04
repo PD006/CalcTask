@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E720007F21DE19C500F7EB96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E720007E21DE19C500F7EB96 /* AppDelegate.m */; };
-		E720008221DE19C500F7EB96 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E720008121DE19C500F7EB96 /* ViewController.m */; };
 		E720008521DE19C500F7EB96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E720008321DE19C500F7EB96 /* Main.storyboard */; };
 		E720008721DE19C700F7EB96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E720008621DE19C700F7EB96 /* Assets.xcassets */; };
 		E720008A21DE19C700F7EB96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E720008821DE19C700F7EB96 /* LaunchScreen.storyboard */; };
 		E720008D21DE19C700F7EB96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E720008C21DE19C700F7EB96 /* main.m */; };
 		E720009721DE19C700F7EB96 /* CalculatorTaskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E720009621DE19C700F7EB96 /* CalculatorTaskTests.m */; };
 		E72000A221DE19C700F7EB96 /* CalculatorTaskUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E72000A121DE19C700F7EB96 /* CalculatorTaskUITests.m */; };
-		E7280EAD21DF201F00D886BB /* RoundRect.m in Sources */ = {isa = PBXBuildFile; fileRef = E7280EAC21DF201F00D886BB /* RoundRect.m */; };
+		E7556D3721DF829900E21EAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7556D3621DF829900E21EAC /* AppDelegate.m */; };
+		E7556D3F21DF82E100E21EAC /* RoundRect.m in Sources */ = {isa = PBXBuildFile; fileRef = E7556D3B21DF82E100E21EAC /* RoundRect.m */; };
+		E7556D4021DF82E100E21EAC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7556D3D21DF82E100E21EAC /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +37,6 @@
 
 /* Begin PBXFileReference section */
 		E720007A21DE19C500F7EB96 /* CalculatorTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculatorTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E720007D21DE19C500F7EB96 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E720007E21DE19C500F7EB96 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E720008021DE19C500F7EB96 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E720008121DE19C500F7EB96 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E720008421DE19C500F7EB96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E720008621DE19C700F7EB96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E720008921DE19C700F7EB96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,8 +48,12 @@
 		E720009D21DE19C700F7EB96 /* CalculatorTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E72000A121DE19C700F7EB96 /* CalculatorTaskUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorTaskUITests.m; sourceTree = "<group>"; };
 		E72000A321DE19C700F7EB96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7280EAB21DF201F00D886BB /* RoundRect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoundRect.h; sourceTree = "<group>"; };
-		E7280EAC21DF201F00D886BB /* RoundRect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoundRect.m; sourceTree = "<group>"; };
+		E7556D3521DF829900E21EAC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E7556D3621DF829900E21EAC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E7556D3A21DF82E100E21EAC /* RoundRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundRect.h; sourceTree = "<group>"; };
+		E7556D3B21DF82E100E21EAC /* RoundRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundRect.m; sourceTree = "<group>"; };
+		E7556D3D21DF82E100E21EAC /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E7556D3E21DF82E100E21EAC /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,17 +104,11 @@
 		E720007C21DE19C500F7EB96 /* CalculatorTask */ = {
 			isa = PBXGroup;
 			children = (
-				E720007D21DE19C500F7EB96 /* AppDelegate.h */,
-				E720007E21DE19C500F7EB96 /* AppDelegate.m */,
-				E720008021DE19C500F7EB96 /* ViewController.h */,
-				E720008121DE19C500F7EB96 /* ViewController.m */,
-				E720008321DE19C500F7EB96 /* Main.storyboard */,
-				E720008621DE19C700F7EB96 /* Assets.xcassets */,
-				E720008821DE19C700F7EB96 /* LaunchScreen.storyboard */,
+				E7556D3421DF829900E21EAC /* AppDelegate */,
+				E7556D3821DF82E100E21EAC /* ControllerClasses */,
+				E7556D4121DF82FA00E21EAC /* NativeFiles */,
 				E720008B21DE19C700F7EB96 /* Info.plist */,
 				E720008C21DE19C700F7EB96 /* main.m */,
-				E7280EAB21DF201F00D886BB /* RoundRect.h */,
-				E7280EAC21DF201F00D886BB /* RoundRect.m */,
 			);
 			path = CalculatorTask;
 			sourceTree = "<group>";
@@ -135,6 +129,52 @@
 				E72000A321DE19C700F7EB96 /* Info.plist */,
 			);
 			path = CalculatorTaskUITests;
+			sourceTree = "<group>";
+		};
+		E7556D3421DF829900E21EAC /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				E7556D3521DF829900E21EAC /* AppDelegate.h */,
+				E7556D3621DF829900E21EAC /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		E7556D3821DF82E100E21EAC /* ControllerClasses */ = {
+			isa = PBXGroup;
+			children = (
+				E7556D3921DF82E100E21EAC /* RoundRect */,
+				E7556D3C21DF82E100E21EAC /* ViewController */,
+			);
+			path = ControllerClasses;
+			sourceTree = "<group>";
+		};
+		E7556D3921DF82E100E21EAC /* RoundRect */ = {
+			isa = PBXGroup;
+			children = (
+				E7556D3A21DF82E100E21EAC /* RoundRect.h */,
+				E7556D3B21DF82E100E21EAC /* RoundRect.m */,
+			);
+			path = RoundRect;
+			sourceTree = "<group>";
+		};
+		E7556D3C21DF82E100E21EAC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E7556D3D21DF82E100E21EAC /* ViewController.m */,
+				E7556D3E21DF82E100E21EAC /* ViewController.h */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E7556D4121DF82FA00E21EAC /* NativeFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E720008321DE19C500F7EB96 /* Main.storyboard */,
+				E720008621DE19C700F7EB96 /* Assets.xcassets */,
+				E720008821DE19C700F7EB96 /* LaunchScreen.storyboard */,
+			);
+			path = NativeFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,10 +307,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7280EAD21DF201F00D886BB /* RoundRect.m in Sources */,
-				E720008221DE19C500F7EB96 /* ViewController.m in Sources */,
+				E7556D3721DF829900E21EAC /* AppDelegate.m in Sources */,
+				E7556D3F21DF82E100E21EAC /* RoundRect.m in Sources */,
+				E7556D4021DF82E100E21EAC /* ViewController.m in Sources */,
 				E720008D21DE19C700F7EB96 /* main.m in Sources */,
-				E720007F21DE19C500F7EB96 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

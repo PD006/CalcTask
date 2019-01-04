@@ -9,13 +9,17 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UILabel *lblCurrentTappedValue;
+@property (weak, nonatomic) IBOutlet UITextView *lblTotalString;
+
+
+
 - (IBAction)digitTapped:(UIButton *)sender;
 - (IBAction)operationTapped:(UIButton *)sender;
 - (IBAction)acTapped:(UIButton *)sender;
 - (IBAction)bracketTapped:(UIButton *)sender;
 - (IBAction)getResultTapped:(UIButton *)sender;
-@property (weak, nonatomic) IBOutlet UILabel *lblCurrentTappedValue;
-@property (weak, nonatomic) IBOutlet UITextView *lblTotalString;
 - (IBAction)getPercentTapped:(UIButton *)sender;
 
 

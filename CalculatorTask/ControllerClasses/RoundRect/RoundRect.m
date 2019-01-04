@@ -55,8 +55,6 @@
     [self.borderColor setStroke];
     borderPath.lineWidth = self.borderWidth;
     [borderPath stroke];
-    
-    // whatever else you need drawn
 }
 
 @end
