@@ -161,8 +161,8 @@
 		E7556D3C21DF82E100E21EAC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				E7556D3D21DF82E100E21EAC /* ViewController.m */,
 				E7556D3E21DF82E100E21EAC /* ViewController.h */,
+				E7556D3D21DF82E100E21EAC /* ViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";

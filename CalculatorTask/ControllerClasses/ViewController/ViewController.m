@@ -39,11 +39,8 @@
     [allPreviousNumber addObject:strDigitNumber];
     _lblCurrentTappedValue.text = strDigitNumber;
     totalString = [totalString stringByAppendingString:[NSString stringWithFormat:@"%@",strDigitNumber]];
-    if (allExpression.count != 1 && [[allExpression lastObject] isEqual:@"√"]) {
-        MainExpresionString = [MainExpresionString stringByAppendingString:[NSString stringWithFormat:@"%@)",strDigitNumber]];
-    } else {
-        MainExpresionString = [MainExpresionString stringByAppendingString:[NSString stringWithFormat:@"%@",strDigitNumber]];
-    }
+    MainExpresionString = [MainExpresionString stringByAppendingString:[NSString stringWithFormat:@"%@",strDigitNumber]];
+
     if (isPercentTapped) {
 
         int secondDigit = [strDigitNumber intValue];
@@ -64,6 +61,9 @@
     _lblCurrentTappedValue.text = strOperation;
     totalString = [totalString stringByAppendingString:[NSString stringWithFormat:@" %@ ",strOperation]];
     _lblTotalString.text = totalString;
+    if (allExpression.count != 1 && [[allExpression lastObject] isEqual:@"√"]) {
+        MainExpresionString = [MainExpresionString stringByAppendingString:@")"];
+    }
     
     ///////For Modulus////////
     if ([strOperation  isEqual: @"%"]) {
@@ -78,7 +78,13 @@
                 NSRange range = NSMakeRange(i,MainExpresionString.length - i);
                 NSString *code = [MainExpresionString substringWithRange:NSMakeRange(i,MainExpresionString.length - i)];
                 NSLog(@"%@",code);
-                MainExpresionString = [MainExpresionString stringByReplacingCharactersInRange:range withString:[NSString stringWithFormat:@"modulus:by:%@,",code]];
+                if ([code containsString:@"("]) {
+                    MainExpresionString = [MainExpresionString stringByReplacingCharactersInRange:range withString:[NSString stringWithFormat:@"modulus:by:%@,",code]];
+                }
+                else {
+                    MainExpresionString = [MainExpresionString stringByReplacingCharactersInRange:range withString:[NSString stringWithFormat:@"modulus:by:(%@,",code]];
+                }
+                
                 NSLog(@"%@",MainExpresionString);
                 break;
             }
@@ -87,7 +93,12 @@
                 NSRange range = NSMakeRange(0,MainExpresionString.length);
                 NSString *code = [MainExpresionString substringWithRange:NSMakeRange(0,MainExpresionString.length)];
                 NSLog(@"%@",code);
-                MainExpresionString = [MainExpresionString stringByReplacingCharactersInRange:range withString:[NSString stringWithFormat:@"modulus:by:(%@,",code]];
+                if ([code containsString:@"("]) {
+                    MainExpresionString = [MainExpresionString stringByReplacingCharactersInRange:range withString:[NSString stringWithFormat:@"modulus:by:%@,",code]];
+                }
+                else {
+                    MainExpresionString = [MainExpresionString stringByReplacingCharactersInRange:range withString:[NSString stringWithFormat:@"modulus:by:(%@,",code]];
+                }
                 NSLog(@"%@",MainExpresionString);
                 break;
             }
@@ -133,15 +144,26 @@
     _lblCurrentTappedValue.text = strBracket;
     totalString = [totalString stringByAppendingString:[NSString stringWithFormat:@"%@",strBracket]];
     _lblTotalString.text = totalString;
+    if (allExpression.count != 1 && [[allExpression lastObject] isEqual:@"√"]) {
+        MainExpresionString = [MainExpresionString stringByAppendingString:@")"];
+    }
     MainExpresionString = [MainExpresionString stringByAppendingString:[NSString stringWithFormat:@"%@",strBracket]];
 }
 
 
 ///////For Result////////
 - (IBAction)getResultTapped:(UIButton *)sender {
+    char lastChar = [MainExpresionString characterAtIndex:MainExpresionString.length - 1];
+    if (allExpression.count != 1 && [[allExpression lastObject] isEqual:@"√"] && lastChar != ')') {
+        MainExpresionString = [MainExpresionString stringByAppendingString:@")"];
+    } else if (allExpression.count != 1 && [[allExpression lastObject] isEqual:@"%"] && lastChar != ')') {
+        MainExpresionString = [MainExpresionString stringByAppendingString:@")"];
+    }
     
     if (allExpression.count == 1 && [[allExpression firstObject] isEqual:@"%"]) {
-        MainExpresionString = [MainExpresionString stringByAppendingString:@")"];
+        if (lastChar != ')') {
+            MainExpresionString = [MainExpresionString stringByAppendingString:@")"];
+        }
         NSLog(@"%@", MainExpresionString);
         NSExpression *expression = [NSExpression expressionWithFormat:[NSString stringWithFormat:@"%@",MainExpresionString]];
         id result = [expression expressionValueWithObject:nil context:nil];
@@ -149,7 +171,8 @@
         _lblCurrentTappedValue.text = [NSString stringWithFormat:@"%@",result];
     }
     else if (allExpression.count == 1 && [[allExpression firstObject] isEqual:@"√"]) {
-        MainExpresionString = [NSString stringWithFormat:@"sqrt:(%@)",[allPreviousNumber lastObject]];
+        NSString *lastDigit = [totalString substringWithRange:NSMakeRange(2, totalString.length - 2)];
+        MainExpresionString = [NSString stringWithFormat:@"sqrt:(%@)",lastDigit];
         NSLog(@"%@", MainExpresionString);
         NSExpression *expression = [NSExpression expressionWithFormat:[NSString stringWithFormat:@"%@",MainExpresionString]];
         id result = [expression expressionValueWithObject:nil context:nil];
@@ -174,6 +197,9 @@
     _lblTotalString.text = totalString;
     [allExpression addObject:@"Percent"];
     
+    if (allExpression.count != 1 && [[allExpression lastObject] isEqual:@"√"]) {
+        MainExpresionString = [MainExpresionString stringByAppendingString:@")"];
+    }
     if ([[allExpression firstObject]  isEqual: @"Percent"]) {
         NSString *code = [MainExpresionString substringWithRange:NSMakeRange(0,MainExpresionString.length)];
         firstValue = [code intValue];
